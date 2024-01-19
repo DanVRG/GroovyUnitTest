@@ -27,7 +27,7 @@ class spockTester extends spock.lang.Specification {
         script.processData(this.msg)
 
         then: "body text is enriched with more text, header value is changed"
-        this.msg.getBody() == "BaseData\nAdded body text from script"
+        this.msg.getBody() == "BaseData\nAdded new body text from script"
         this.msg.getHeaders()["header1"] == "newHeaderData"
     }
 }
